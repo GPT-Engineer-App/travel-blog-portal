@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Container, VStack, HStack, Text, Box, Button, Image, IconButton, SimpleGrid, Card, CardBody } from "@chakra-ui/react";
-import { FaHome, FaMapMarkerAlt, FaGlobe, FaBook } from "react-icons/fa";
+import { Container, VStack, Box, Text, Image, SimpleGrid, Card, CardBody } from "@chakra-ui/react";
+import Header from "../components/Header";
 
 const Home = () => (
   <VStack spacing={4}>
@@ -78,13 +78,8 @@ const Index = () => {
 
   return (
     <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={8} width="100%">
-        <HStack spacing={4}>
-          <IconButton aria-label="Home" icon={<FaHome />} onClick={() => setActivePage("home")} />
-          <IconButton aria-label="Destinations" icon={<FaMapMarkerAlt />} onClick={() => setActivePage("destinations")} />
-          <IconButton aria-label="USA States" icon={<FaGlobe />} onClick={() => setActivePage("usa")} />
-          <IconButton aria-label="World Encyclopedia" icon={<FaBook />} onClick={() => setActivePage("world")} />
-        </HStack>
+      <VStack spacing={8} width="100%" mt={4}>
+        <Header setActivePage={setActivePage} />
         <Box width="100%">{renderPage()}</Box>
       </VStack>
     </Container>
