@@ -1,12 +1,36 @@
 import { useState } from "react";
-import { Container, VStack, HStack, Text, Box, Button, Image, IconButton } from "@chakra-ui/react";
+import { Container, VStack, HStack, Text, Box, Button, Image, IconButton, SimpleGrid, Card, CardBody } from "@chakra-ui/react";
 import { FaHome, FaMapMarkerAlt, FaGlobe, FaBook } from "react-icons/fa";
 
 const Home = () => (
   <VStack spacing={4}>
-    <Text fontSize="2xl">Welcome to the Travel Blog</Text>
-    <Text>Explore the world with us!</Text>
-    <Image src="https://images.unsplash.com/photo-1707343848552-893e05dba6ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MXwxfHNlYXJjaHwxfHx0cmF2ZWx8ZW58MHx8fHwxNzE3NDk2MTgyfDA&ixlib=rb-4.0.3&q=80&w=1080" alt="Travel" />
+    <Text fontSize="4xl" fontWeight="bold">
+      Isolated Traveller
+    </Text>
+    <Text fontSize="xl">Travel Seekers and Adventure Enthusiasts</Text>
+    <SimpleGrid columns={3} spacing={10} mt={8}>
+      <Card>
+        <CardBody>
+          <Text fontSize="2xl">World Encyclopedia</Text>
+        </CardBody>
+      </Card>
+      <Card>
+        <CardBody>
+          <Text fontSize="2xl">About Us</Text>
+        </CardBody>
+      </Card>
+      <Card>
+        <CardBody>
+          <Text fontSize="2xl">Destinations</Text>
+        </CardBody>
+      </Card>
+    </SimpleGrid>
+    <Box mt={8} width="100%">
+      <Text fontSize="2xl" mb={4}>
+        Recent Posts
+      </Text>
+      <Image src="https://images.unsplash.com/photo-1707343848552-893e05dba6ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MXwxfHNlYXJjaHwxfHx0cmF2ZWx8ZW58MHx8fHwxNzE3NDk2MTgyfDA&ixlib=rb-4.0.3&q=80&w=1080" alt="Travel" />
+    </Box>
   </VStack>
 );
 
