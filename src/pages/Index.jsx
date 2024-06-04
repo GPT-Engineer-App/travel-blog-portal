@@ -78,8 +78,8 @@ const Index = () => {
 
   return (
     <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+      <Header setActivePage={setActivePage} />
       <VStack spacing={8} width="100%" mt={4}>
-        <Header setActivePage={setActivePage} />
         <Box width="100%">{renderPage()}</Box>
       </VStack>
     </Container>
